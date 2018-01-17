@@ -1,5 +1,4 @@
-from OR import *
-from AND import *
+from Gate import *
 
 if __name__ == '__main__':
     or1 = OR(3)

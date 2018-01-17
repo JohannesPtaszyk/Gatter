@@ -61,3 +61,34 @@ class Gate:
         return "Error: " \
                "Its not possible to get an output of the 'Gate' class, please use a subclass and override this method"
 
+
+
+# A Subclass of Gate defining an OR Gate
+
+
+class OR(Gate):
+    def __init__(self, input_count):
+        super().__init__(input_count)
+        self.typ = "COR"
+
+    # Calc and returns output state depending on input state
+
+    def calc_output_state(self):
+        for i in range(0, self.get_input_count()):
+            if self.get_input_state(i) is True:
+                return True
+        return False
+
+
+class AND(Gate):
+    def __init__(self, input_count):
+        super().__init__(input_count)
+        self.typ = "COR"
+
+    # Calc and returns output state depending on input state
+
+    def calc_output_state(self):
+        for i in range(0, self.get_input_count()):
+            if self.get_input_state(i) is True:
+                return True
+        return False
